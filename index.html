@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Roses — Dark Fem Angel Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Polices Google Fonts pour l'esthétique old-school / gothique / script -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- En-tête / Bannière style ancien web -->
+    <header class="site-header">
+        <div class="header-banner">
+            <h1 class="main-title">Angel Roses</h1>
+            <p class="subtitle">✦ the sanctuary of a dark feminine soul ✦</p>
+        </div>
+        
+        <!-- Barre de navigation rétro -->
+        <nav class="retro-nav">
+            <a href="#accueil" class="nav-tab active" onclick="switchTab('accueil')">accueil</a>
+            <a href="#daily" class="nav-tab" onclick="switchTab('daily')">daily life</a>
+            <a href="#art" class="nav-tab" onclick="switchTab('art')">art</a>
+            <a href="#personal" class="nav-tab" onclick="switchTab('personal')">personal info</a>
+            <a href="#media" class="nav-tab" onclick="switchTab('media')">série / musique</a>
+        </nav>
+    </header>
+
+    <div class="container main-layout">
+        
+        <!-- Colonne de gauche : Widgets rétro / liens / calendrier -->
+        <aside class="sidebar-left">
+            <div class="widget">
+                <h3><span>✦</span> calendar <span>✦</span></h3>
+                <div class="mini-calendar">
+                    <table>
+                        <caption>November 2026</caption>
+                        <tr><th>L</th><th>M</th><th>M</th><th>J</th><th>V</th><th>S</th><th>D</th></tr>
+                        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+                        <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+                        <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+                        <tr><td class="current-day">22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+                        <tr><td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3><span>✦</span> navigation <span>✦</span></h3>
+                <ul class="widget-links">
+                    <li><a href="#accueil">» Home Sanctuary</a></li>
+                    <li><a href="#daily">» Letters & Diary</a></li>
+                    <li><a href="#art">» Vintage Artbooks</a></li>
+                    <li><a href="#personal">» Caard Profile</a></li>
+                    <li><a href="#media">» Ost & Series</a></li>
+                </ul>
+            </div>
+
+            <div class="widget status-widget">
+                <h3><span>✦</span> mood & status <span>✦</span></h3>
+                <p><strong>vibe:</strong> ethereal & bloodstained</p>
+                <p><strong>status:</strong> painting in the dark 🍷</p>
+            </div>
+        </aside>
+
+        <!-- Contenu Principal dynamique par sections -->
+        <main class="content-area">
+
+            <!-- SECTION ACCUEIL -->
+            <section id="accueil" class="blog-section active-section">
+                <div class="retro-box">
+                    <h2><span>❀</span> Welcome to Angel Roses <span>❀</span></h2>
+                    <p class="drop-cap">
+                        Bienvenue dans ce recoin oublié du web, entre ombres baroques et douces lueurs d'ivoire. Ce site est un espace désordonné, intime et vivant, façonné par mes inspirations, mes carnets de croquis et mes pensées nocturnes.
+                    </p>
+                    <div class="divider-ornament"></div>
+                    <p>
+                        Installez-vous confortablement, écoutez l'écho du passé et explorez les différentes pièces de ce sanctuaire. Attention aux épines, l'élégance cache parfois quelques mystères...
+                    </p>
+                    <div class="featured-img-container">
+                        <div class="vintage-frame">
+                            <p class="frame-caption">✦ featured fragment — 2026 ✦</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION DAILY LIFE (Ambiance Lettre & Dentelle) -->
+            <section id="daily" class="blog-section">
+                <div class="letter-container">
+                    <div class="lace-header"></div>
+                    <div class="letter-content">
+                        <h2><span>✦</span> Daily Life & Letters <span>✦</span></h2>
+                        <span class="letter-date">Entry — 23 Novembre 2026</span>
+                        <p>
+                            Aujourd'hui, le temps est lourd et le ciel a pris cette teinter de rouge noirci que j'aime tant observer derrière mes fenêtres. J'ai passé des heures à mélanger mes encres, entre le bordeaux profond et des touches de vanille dorée sur le papier.
+                        </p>
+                        <p>
+                            Le quotidien a cette beauté étrange quand on prend le temps de le regarder à travers un filtre un peu mélancolique. Entre les cours, les croquis avortés et les tasses de thé tièdes, chaque petite chose trouve sa place ici, écrite à la volée, comme un journal intime ouvert aux vent des âmes errantes.
+                        </p>
+                        <p class="signature-letter">With dark affection, Angel Roses 🥀</p>
+                    </div>
+                    <div class="lace-footer"></div>
+                </div>
+            </section>
+
+            <!-- SECTION ART (Carnets Vintage & Sous-sections) -->
+            <section id="art" class="blog-section">
+                <div class="retro-box">
+                    <h2><span>✦</span> The Cabinet of Art <span>✦</span></h2>
+                    <p class="section-intro">Choisis un carnet poussiéreux pour ouvrir mes travaux :</p>
+                    
+                    <div class="notebooks-grid">
+                        <div class="notebook-card" onclick="openSubArt('observation')">
+                            <div class="notebook-cover burgundy-cover">
+                                <h3>Observation Work</h3>
+                                <span class="notebook-tag">studies & life drawing</span>
+                            </div>
+                        </div>
+
+                        <div class="notebook-card" onclick="openSubArt('std2a')">
+                            <div class="notebook-cover champagne-cover">
+                                <h3>STD2A</h3>
+                                <span class="notebook-tag">design & projects</span>
+                            </div>
+                        </div>
+
+                        <div class="notebook-card" onclick="openSubArt('personal-art')">
+                            <div class="notebook-cover dark-cover">
+                                <h3>Personal Art</h3>
+                                <span class="notebook-tag">OCs & Fanarts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sous-section Personal Art (Cachée par défaut, s'affiche au clic) -->
+                    <div id="sub-art-container" class="sub-art-panel" style="display: none;">
+                        <button class="back-btn" onclick="closeSubArt()">← Retour aux carnets</button>
+                        <h3 id="sub-art-title">Personal Art</h3>
+                        <div class="sub-tabs">
+                            <button onclick="filterArt('oc')" class="sub-tab-btn">Ocs (Original Characters)</button>
+                            <button onclick="filterArt('fanart')" class="sub-tab-btn">Fanart</button>
+                        </div>
+                        <div id="art-gallery" class="art-gallery-grid">
+                            <!-- Contenu injecté dynamiquement -->
+                            <div class="art-item oc"><span>[ OC Artwork showcase ]</span></div>
+                            <div class="art-item fanart"><span>[ Fanart showcase ]</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION PERSONAL INFO (Intégration Caard) -->
+            <section id="personal" class="blog-section">
+                <div class="retro-box">
+                    <h2><span>✦</span> Personal Info <span>✦</span></h2>
+                    <p style="text-align: center; margin-bottom: 1.5rem; color: var(--champagne);">Mon identité sculptée dans les détails :</p>
+                    
+                    <!-- Container pour intégrer le Caard -->
+                    <div class="caard-embed-container">
+                        <!-- Remplacer l'URL ci-dessous par ton lien Caard direct ou iframe -->
+                        <div class="caard-placeholder-box">
+                            <p>✨ Insère ton Caard ici via iframe ou lien direct ✨</p>
+                            <code class="code-snippet">&lt;iframe src="TON_LIEN_CAARD" width="100%" height="600px" frameborder="0"&gt;&lt;/iframe&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION SÉRIE / MUSIQUE -->
+            <section id="media" class="blog-section">
+                <div class="retro-box">
+                    <h2><span>✦</span> Séries & Musique <span>✦</span></h2>
+                    <p>Les mélodies ténébreuses et les univers visuels qui nourrissent mon inspiration au quotidien.</p>
+                    
+                    <div class="media-grid">
+                        <div class="media-card">
+                            <h4>🎧 Obsessions Musicales</h4>
+                            <ul>
+                                <li>Dark ambient & Baroque goth</li>
+                                <li>Chant choral & Voix éthérées</li>
+                                <li>Playlists de nuit sous la pluie</li>
+                            </ul>
+                        </div>
+                        <div class="media-card">
+                            <h4>📺 Séries & Atmosphères</h4>
+                            <ul>
+                                <li>Drames historiques et fantastiques</li>
+                                <li>Esthétiques sombres et romantiques</li>
+                                <li>Contes revisités</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Colonne de droite : Statut, musique player / petits widgets -->
+        <aside class="sidebar-right">
+            <div class="widget">
+                <h3><span>✦</span> featured img <span>✦</span></h3>
+                <div class="sidebar-img-frame">
+                    <div class="angel-placeholder"></div>
+                </div>
+            </div>
+
+            <div class="widget music-widget">
+                <h3><span>✦</span> soundtrack <span>✦</span></h3>
+                <p class="song-title">♪ Dark Angel Requiem</p>
+                <div class="fake-player">
+                    <span class="play-btn">▶</span>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                    <span class="time">0:00 / 3:45</span>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3><span>✦</span> visitors <span>✦</span></h3>
+                <div class="counter-box">
+                    <span>0</span><span>6</span><span>8</span><span>4</span><span>2</span>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <p>✦ Angel Roses Blog — Crafted with burgundy & ivory dreams © 2026 ✦</p>
+    </footer>
+
+    <!-- Script minimal pour la navigation entre onglets et carnets -->
+    <script>
+        function switchTab(tabId) {
+            // Empêche le comportement par défaut des ancres
+            event.preventDefault();
+            
+            // Cache toutes les sections
+            document.querySelectorAll('.blog-section').forEach(sec => {
+                sec.classList.remove('active-section');
+            });
+            
+            // Désactive tous les onglets
+            document.querySelectorAll('.retro-nav a').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Active la section et l'onglet correspondants
+            document.getElementById(tabId).classList.add('active-section');
+            event.target.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openSubArt(category) {
+            document.querySelector('.notebooks-grid').style.display = 'none';
+            document.querySelector('.section-intro').style.display = 'none';
+            const panel = document.getElementById('sub-art-container');
+            panel.style.display = 'block';
+            
+            const titleElem = document.getElementById('sub-art-title');
+            if(category === 'observation') titleElem.textContent = "Observation Work — Études & Croquis";
+            if(category === 'std2a') titleElem.textContent = "STD2A — Projets & Design";
+            if(category === 'personal-art') titleElem.textContent = "Personal Art (OCs & Fanart)";
+        }
+
+        function closeSubArt() {
+            document.getElementById('sub-art-container').style.display = 'none';
+            document.querySelector('.notebooks-grid').style.display = 'grid';
+            document.querySelector('.section-intro').style.display = 'block';
+        }
+
+        function filterArt(type) {
+            const items = document.querySelectorAll('.art-item');
+            items.forEach(item => {
+                if(item.classList.contains(type)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

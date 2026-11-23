@@ -1,0 +1,575 @@
+/* ==========================================
+   PALETTE DE COULEURS — DARK FEM ANGEL
+   ========================================== */
+:root {
+    --bordeaux-profond: #681E2C;
+    --rouge-noirci: #3F2025;
+    --rouge-grenat: #9B2938;
+    --rouge-rose: #A3333D;
+    --vanille-doree: #C9A77F;
+    --ivoire: #F3E5D2;
+    --champagne: #D5B58A;
+    --or-ancien: #C49A55;
+    --brun-acajou: #82563E;
+    --creme-doree: #E5D0B7;
+    
+    --bg-dark: #12090C;
+    --bg-box: #1E1014;
+    --border-vintage: #681E2C;
+}
+
+/* Reset de base et ambiance rétro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--ivoire);
+    font-family: 'Playfair Display', serif;
+    background-image: radial-gradient(circle at 50% 20%, #291218 0%, #12090C 90%);
+    background-attachment: fixed;
+    line-height: 1.7;
+}
+
+/* En-tête / Bannière */
+.site-header {
+    text-align: center;
+    padding: 2.5rem 1rem 1rem 1rem;
+    border-bottom: 2px dashed var(--bordeaux-profond);
+    background: rgba(31, 16, 20, 0.85);
+}
+
+.main-title {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 3.5rem;
+    color: var(--champagne);
+    text-shadow: 2px 2px 6px var(--rouge-noirci), 0 0 15px var(--or-ancien);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-family: 'Special Elite', monospace;
+    color: var(--vanille-doree);
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    margin-top: 0.5rem;
+    text-transform: lowercase;
+}
+
+/* Barre de navigation rétro */
+.retro-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    background: var(--rouge-noirci);
+    padding: 0.6rem;
+    border-top: 1px solid var(--bordeaux-profond);
+    border-bottom: 1px solid var(--bordeaux-profond);
+}
+
+.nav-tab {
+    color: var(--creme-doree);
+    text-decoration: none;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+}
+
+.nav-tab:hover, .nav-tab.active {
+    color: var(--ivoire);
+    background-color: var(--bordeaux-profond);
+    border: 1px dashed var(--or-ancien);
+    box-shadow: 0 0 8px var(--rouge-rose);
+}
+
+/* Layout global à 3 colonnes (style old blog) */
+.main-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    gap: 1.5rem;
+    max-width: 1250px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    .sidebar-left, .sidebar-right {
+        display: none; /* Simplification responsive si besoin */
+    }
+}
+
+/* Widgets des barres latérales */
+.widget {
+    background-color: var(--bg-box);
+    border: 1px solid var(--bordeaux-profond);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.widget h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9rem;
+    color: var(--champagne);
+    text-align: center;
+    border-bottom: 1px dotted var(--rouge-grenat);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.widget h3 span {
+    color: var(--rouge-rose);
+}
+
+.widget-links {
+    list-style: none;
+}
+
+.widget-links li {
+    margin-bottom: 0.4rem;
+}
+
+.widget-links a {
+    color: var(--creme-doree);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'Special Elite', monospace;
+    transition: color 0.2s;
+}
+
+.widget-links a:hover {
+    color: var(--champagne);
+    padding-left: 5px;
+}
+
+/* Calendrier miniature */
+.mini-calendar table {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    color: var(--vanille-doree);
+    border-collapse: collapse;
+}
+
+.mini-calendar th {
+    color: var(--rouge-rose);
+    border-bottom: 1px solid var(--rouge-noirci);
+}
+
+.mini-calendar td.current-day {
+    background-color: var(--bordeaux-profond);
+    color: var(--ivoire);
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.status-widget p {
+    font-size: 0.85rem;
+    font-family: 'Special Elite', monospace;
+    color: var(--creme-doree);
+    margin-bottom: 0.3rem;
+}
+
+/* Zones de contenu */
+.blog-section {
+    display: none;
+}
+
+.blog-section.active-section {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.retro-box {
+    background-color: var(--bg-box);
+    border: 2px solid var(--bordeaux-profond);
+    padding: 2rem;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 5px 15px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.retro-box h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--champagne);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px var(--rouge-noirci);
+}
+
+.retro-box h2 span {
+    color: var(--rouge-rose);
+}
+
+.drop-cap::first-letter {
+    font-size: 3rem;
+    font-family: 'Cinzel Decorative', serif;
+    float: left;
+    line-height: 1;
+    margin-right: 0.5rem;
+    color: var(--rouge-rose);
+    text-shadow: 1px 1px 2px var(--or-ancien);
+}
+
+.divider-ornament {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--or-ancien), transparent);
+    margin: 1.5rem 0;
+}
+
+/* Style de la page Daily Life (Effet Lettre & Dentelle) */
+.letter-container {
+    background-color: var(--ivoire);
+    color: var(--rouge-noirci);
+    border: 1px solid var(--or-ancien);
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    position: relative;
+    font-family: 'Playfair Display', serif;
+}
+
+.lace-header {
+    height: 15px;
+    background: repeating-linear-gradient(45deg, var(--champagne), var(--champagne) 10px, var(--creme-doree) 10px, var(--creme-doree) 20px);
+    border-bottom: 1px solid var(--brun-acajou);
+}
+
+.lace-footer {
+    height: 15px;
+    background: repeating-linear-gradient(45deg, var(--champagne), var(--champagne) 10px, var(--creme-doree) 10px, var(--creme-doree) 20px);
+    border-top: 1px solid var(--brun-acajou);
+}
+
+.letter-content {
+    padding: 2.5rem;
+}
+
+.letter-content h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--bordeaux-profond);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.letter-date {
+    display: block;
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    color: var(--brun-acajou);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dotted var(--brun-acajou);
+    padding-bottom: 0.5rem;
+}
+
+.letter-content p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    color: var(--rouge-noirci);
+}
+
+.signature-letter {
+    margin-top: 2rem;
+    text-align: right;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--bordeaux-profond);
+}
+
+/* Style section Art (Carnets vintage) */
+.section-intro {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    color: var(--vanille-doree);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.notebooks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.notebook-card {
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.notebook-cover {
+    padding: 2rem 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    border: 2px solid var(--or-ancien);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notebook-cover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(155, 41, 56, 0.4);
+}
+
+.burgundy-cover {
+    background: linear-gradient(135deg, var(--bordeaux-profond), var(--rouge-noirci));
+}
+
+.champagne-cover {
+    background: linear-gradient(135deg, var(--brun-acajou), var(--bordeaux-profond));
+}
+
+.dark-cover {
+    background: linear-gradient(135deg, var(--rouge-noirci), var(--bg-dark));
+}
+
+.notebook-cover h3 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--ivoire);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+}
+
+.notebook-tag {
+    font-family: 'Special Elite', monospace;
+    font-size: 0.75rem;
+    color: var(--champagne);
+}
+
+/* Panneau sous-section Art */
+.sub-art-panel {
+    margin-top: 1rem;
+}
+
+.back-btn {
+    background: var(--bordeaux-profond);
+    color: var(--ivoire);
+    border: 1px solid var(--or-ancien);
+    padding: 0.4rem 0.8rem;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+    background: var(--rouge-grenat);
+}
+
+.sub-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sub-tab-btn {
+    background: var(--rouge-noirci);
+    color: var(--vanille-doree);
+    border: 1px solid var(--bordeaux-profond);
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+}
+
+.sub-tab-btn:hover {
+    background: var(--bordeaux-profond);
+    color: var(--ivoire);
+}
+
+.art-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.art-item {
+    background: var(--bg-dark);
+    border: 1px dashed var(--or-ancien);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Special Elite', monospace;
+    color: var(--vanille-doree);
+    font-size: 0.85rem;
+}
+
+/* Caard embed placeholder style */
+.caard-placeholder-box {
+    background: var(--bg-dark);
+    border: 1px dashed var(--or-ancien);
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    color: var(--vanille-doree);
+}
+
+.code-snippet {
+    display: block;
+    margin-top: 1rem;
+    background: var(--rouge-noirci);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--champagne);
+    border-radius: 3px;
+    word-break: break-all;
+}
+
+/* Medias grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.media-card {
+    background: var(--bg-dark);
+    border: 1px solid var(--bordeaux-profond);
+    padding: 1.2rem;
+}
+
+.media-card h4 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--champagne);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dotted var(--rouge-grenat);
+    padding-bottom: 0.3rem;
+}
+
+.media-card ul {
+    list-style: square inside;
+    font-size: 0.9rem;
+    color: var(--creme-doree);
+    font-family: 'Special Elite', monospace;
+}
+
+.media-card li {
+    margin-bottom: 0.4rem;
+}
+
+/* Sidebar droite widgets */
+.sidebar-img-frame {
+    height: 220px;
+    background: var(--bg-dark);
+    border: 1px solid var(--or-ancien);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.angel-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(104,30,44,0.3), rgba(63,32,37,0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.angel-placeholder::after {
+    content: "🕯️ [ Angel Art ] 🕯️";
+    font-family: 'Special Elite', monospace;
+    font-size: 0.8rem;
+    color: var(--vanille-doree);
+}
+
+.song-title {
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    color: var(--champagne);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.fake-player {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.75rem;
+    color: var(--vanille-doree);
+}
+
+.play-btn {
+    background: var(--bordeaux-profond);
+    color: var(--ivoire);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--or-ancien);
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background: var(--bg-dark);
+    border: 1px solid var(--or-ancien);
+    position: relative;
+}
+
+.progress-fill {
+    width: 35%;
+    height: 100%;
+    background: var(--rouge-rose);
+}
+
+.counter-box {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    font-family: 'Special Elite', monospace;
+}
+
+.counter-box span {
+    background: var(--bg-dark);
+    color: var(--champagne);
+    border: 1px solid var(--bordeaux-profond);
+    padding: 0.2rem 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px dashed var(--bordeaux-profond);
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    color: var(--vanille-doree);
+    background: rgba(18, 9, 12, 0.9);
+    margin-top: 3rem;
+}
